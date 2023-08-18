@@ -2,4 +2,77 @@ body {
  
     background: linear-gradient(90deg, rgb(249, 218, 157) 39%, rgb(241, 102, 209) 100%);
     text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+h1 {
+
+    text-align: center;
+    font-size: 45px;
+}
+
+h2 {
+
+    margin: 0 0 5px;
+    font-size: 25px;
+}
+
+select {
+
+    display: block;
+    width: 100%;
+    padding: 0 0 5px;
+    font-size: 15px;
+}
+
+footer {
+
+    text-align: center;
+    padding-top: 20px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.container {
+
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgb(224, 230, 233);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+
+    
+}
+
+.city {
+
+    display: flex;
+    margin: 10px 0;
+    justify-content: space-between;
+    padding: 0 0 30px ;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+}
+
+.city:last-child {
+    border: none;
+}
+
+.date {
+
+    opacity: 0.6;
+
+}
+
+.time {
+
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.time small {
+
+    font-size: 20px;
+    vertical-align: middle;
+    line-height: 48px;
 }
