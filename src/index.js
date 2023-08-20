@@ -8,7 +8,7 @@ function updateTime() {
         let brusselsTimeElement = brusselsElement.querySelector(".time");
         let brusselsTime = moment().tz("Europe/Brussels");
         brusselsDateElement.innerHTML = brusselsTime .format("Do MMMM YYYY"); 
-        brusselsTimeElement.innerHTML = brusselsTime .format("h:mm:ss[<small>]A[</small>]");
+        brusselsTimeElement.innerHTML = brusselsTime .format("h:mm:ss SSS[<small>]A[</small>]");
     };  
     
 let londonElement = document.querySelector("#london");
@@ -18,7 +18,7 @@ if (londonElement) {
     let londonTimeElement = londonElement.querySelector(".time");
     let londonTime = moment().tz("Europe/London");
     londonDateElement.innerHTML = londonTime .format("Do MMMM YYYY"); 
-    londonTimeElement.innerHTML = londonTime .format("h:mm:ss[<small>]A[</small>]");
+    londonTimeElement.innerHTML = londonTime .format("h:mm:ss SSS[<small>]A[</small>]");
 };
 
 
@@ -29,7 +29,7 @@ if (sydneyElement) {
     let sydneyTimeElement = sydneyElement.querySelector(".time");
     let sydneyTime = moment().tz("Australia/Sydney");
     sydneyDateElement.innerHTML = sydneyTime .format("Do MMMM YYYY"); 
-    sydneyTimeElement.innerHTML = sydneyTime .format("h:mm:ss[<small>]A[</small>]");
+    sydneyTimeElement.innerHTML = sydneyTime .format("h:mm:ss SSS[<small>]A[</small>]");
 };
     
     let newYorkElement = document.querySelector("#new-york");
@@ -39,7 +39,7 @@ if (sydneyElement) {
         let newYorkTimeElement = newYorkElement.querySelector(".time");
         let newYorkTime = moment().tz("America/New_York");
         newYorkDateElement.innerHTML = newYorkTime .format("Do MMMM YYYY"); 
-        newYorkTimeElement.innerHTML = newYorkTime .format("h:mm:ss [<small>]A[</small>]");
+        newYorkTimeElement.innerHTML = newYorkTime .format("h:mm:ss SSS[<small>]A[</small>]");
     };
 
 }
@@ -60,12 +60,17 @@ function updateCity(event) {
             <div class="date">${cityTime.format("Do MMMM YYYY")} </div>
         </div>
         <div class="time"> ${cityTime.format("h:mm")} <small>${cityTime.format("A")} </small></div>
-    </div>`;
-
+    </div>
+    <a href="index.html">All Cities</a>`;
+    
 }
 
 updateTime();
-setInterval(updateTime, 1000);
+setInterval(updateTime, 1);
+
+
+
+
 
 let citiesSelectElement = document.querySelector("#city");
 citiesSelectElement.addEventListener("change", updateCity);
